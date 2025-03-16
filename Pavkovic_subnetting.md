@@ -99,7 +99,7 @@ Antwort:
 
 **Antwort**
 
-Die 30 Netzwerke lassen nur 2 Hosts zu und werden meistens zwischen 2 Routern oder einfachen netzverbindungen genutzt da es kein platz für weitere Adressen hat. Kann man auch als Direktverbindung zweier Geräte sehen. 
+Die 30 Netzwerke lassen nur 2 Hosts zu und werden meistens zwischen 2 Routern oder einfachen netzverbindungen genutzt da es kein platz für weitere Adressen hat. Kann man auch als Direktverbindung zweier Geräte sehen. Daher es nur 2 Adressen übrig sind kann man es nicht weiter teilen da es unbrauchbar werden würde
 
 ## Übung 7
 
