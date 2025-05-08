@@ -1,0 +1,54 @@
+In dieser Doku geht um die Aufsetzung des Recursive_Unbound DNS in dem Ubuntu Server.
+
+Dies wurde in der **Virtualbox 7.1.8** umgesetzt.
+
+Das verwedente Image für den **Ubuntu Server** war **24.04.2**
+
+**Einstellungen in der VirtualBox:**
+
+CPU-Kerne: 24 (PAE/NX + Nested VT-x/AMD-V + Nested Paging)
+RAM: 16 GB
+Grafikspeicher 256 MB (3D Beschleunigung)
+Netzwerkadapter: Netzwerkbrücke
+
+**Zu installierende Packete:**
+
+sudo apt update --> upgrade
+sudo apt install unbound dnsutils net-tools curl tcpdump -y // Der DNS
+
+Dann Änderungen zu tätigen:
+
+**Im Pfad:**
+
+/etc/unbound/unbound.conf.d/local.conf
+
+server:
+    interface: 0.0.0.0
+    access-control: 127.0.0.0/8 allow
+    access-control: 192.168.200.0/24 allow
+    access-control: 172.20.10.0/24 allow
+    verbosity: 1
+    do-ip6: no
+    hide-identity: yes
+    hide-version: yes
+    use-syslog: yes
+    root-hints: "/var/lib/unbound/root.hints"
+    local-zone: "pavkovic.local." static
+    local-data: "host1.pavkovic.local. IN A 192.168.200.10"
+
+Dannach:
+
+sudo curl -o /var/lib/unbound/root.hints https://www.internic.net/domain/named.cache
+
+um die Root Server Liste zu aktualisieren.
+
+Unser DNS Server wird möglicherweise nicht starten können also deaktivieren die Internen Dienste die den Port belegen:
+
+sudo systemctl disable systemd-resolved
+sudo systemctl stop systemd-resolved
+sudo rm -f /etc/resolv.conf
+echo "nameserver 127.0.0.1" | sudo tee /etc/resolv.conf
+
+Ende.
+
+Nun auf dem Windwos Rechner die IP der Virtuel Maschiene des Server im Windows Adapter als DNS eintragen und wir haben einen funktionieren DNS Server.
