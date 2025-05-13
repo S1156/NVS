@@ -1,4 +1,4 @@
-Um einen SSH Server auf der VM aufzusetzten einmal
+**Installation SSH:**
 
 sudo apt install openssh-server
 
@@ -6,13 +6,25 @@ systemctl enable ssh
 
 systemctl start ssh
 
-Puplic Key Auth:
 
-**Partner: Filip Orlovic**
+**Puplic Key Auth:**
+
+**Partner:** Filip Orlovic
+
+| Verwendete Befehle | Funktion                         |
+|--------------------|----------------------------------|
+| chmod              | Freigaben Kontrolle              | 
+| ssh-keygen         | Generiert Öffentlichen Schlüssel |
+| nano               | Texteditor in Ubuntu             |
+
 
 Er hat auf dem Pfad:
 
-**~/.ssh/authorized_keys**
+**~/.ssh/**
+
+in der Datei: 
+
+**authorized_keys**
 
 modifiziert mit 
 
@@ -21,7 +33,7 @@ modifiziert mit
 
 meinen Puplic key eingetragen der mit:
 
-**sssh-keygen -t rsa -b 4096 -C "du@example.com"**
+**ssh-keygen -t rsa -b 4096 -C "du@example.com"**
 
 auf meiner VM genertiert worden ist.
 
@@ -29,9 +41,9 @@ Mein Key kann mit dem Command:
 
 **cat ~/.ssh/id_rsa.pub**
 
-geöffnet werden.
+geöffnet werden. (oder nano id_rsa.pub)
 
-Sobald er die Daten eingespeichert hat konnte ich mich mit SSH ohne Passwort verbinden.
+Sobald er die Daten eingespeichert hat in seiner Datei konnte ich mich mit SSH ohne Passwort verbinden.
 
 The End
 
