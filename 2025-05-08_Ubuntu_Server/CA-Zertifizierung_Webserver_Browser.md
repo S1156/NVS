@@ -114,6 +114,7 @@ server {
 }
 ```
 
+Optionale Umleitung http --> https
 ```Optionale Umleitung http --> https
 server{
     server {
