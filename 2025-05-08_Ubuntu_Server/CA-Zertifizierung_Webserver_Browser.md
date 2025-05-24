@@ -114,6 +114,15 @@ server {
 }
 ```
 
+```Optionale Umleitung http --> https
+server{
+    server {
+    listen 80;
+    listen [::]:80;
+    return 301 https://$host$request_uri;
+}
+```
+
 Test und Reload:
 
 ```bash
