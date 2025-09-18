@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Mini-Ausstellung — Kunst Online</title>
+  <meta name="description" content="Eine kleine Ausstellung mit Künstlerprofilen, Galerie und Kontakt.">
+  <link rel="stylesheet" href="css/theme-light.css" title="Light">
+  <link rel="alternate stylesheet" href="css/theme-accent.css" title="Accent">
+</head>
+<body>
+  <header class="container">
+    <h1>Mini-Ausstellung</h1>
+    <p class="tagline">Große Kunst im kleinen Rahmen</p>
+  </header>
+
+  <nav class="container">
+    <ul class="nav-list">
+      <li><a href="#kuenstler">Künstler</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="kuenstler">
+      <h2>Künstlerprofile</h2>
+      <p>Hier finden Sie Hintergrundinformationen zu einigen unserer ausgestellten Künstler.</p>
+
+      <details>
+        <summary>Claude Monet</summary>
+        <p>Französischer Maler, Begründer des Impressionismus. Berühmt für seine Seerosenbilder.</p>
+      </details>
+
+      <details>
+        <summary>Frida Kahlo</summary>
+        <p>Mexikanische Malerin, bekannt für Selbstporträts und starke Symbolik.</p>
+      </details>
+
+      <details>
+        <summary>Vincent van Gogh</summary>
+        <p>Niederländischer Maler, berühmt für seine Sonnenblumen und „Sternennacht“.</p>
+      </details>
+    </section>
+
+    <section id="galerie">
+      <h2>Galerie</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/monet.svg" alt="Bild von Claude Monet">
+          <figcaption>Claude Monet</figcaption>
+        </figure>
+        <figure>
+          <img src="images/kahlo.svg" alt="Bild von Frida Kahlo">
+          <figcaption>Frida Kahlo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/vangogh.svg" alt="Bild von Vincent van Gogh">
+          <figcaption>Vincent van Gogh</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <aside>
+      <h2>Öffnungszeiten</h2>
+      <ul>
+        <li>Mo–Fr: 10–18 Uhr</li>
+        <li>Sa–So: 11–17 Uhr</li>
+      </ul>
+      <p class="note">Eintritt frei am ersten Sonntag im Monat.</p>
+    </aside>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Kontaktformular</legend>
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>E-Mail
+            <input type="email" name="email" required>
+          </label>
+          <label>Nachricht
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <div class="actions">
+            <button type="submit">Senden</button>
+            <button type="reset" class="secondary">Zurücksetzen</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Mini-Ausstellung — Handgemacht mit HTML & CSS.</p>
+  </footer>
+
+  <!-- Dokumentation
+    KI-Unterstützung: Struktur, Texte, Layout und CSS wurden von KI vorgeschlagen.
+    Eigenleistung: Inhalte können angepasst, Bilder ersetzt, Design verändert werden.
+  -->
+</body>
+</html>
