@@ -1,0 +1,240 @@
+/* -------------- Theme & Variablen -------------- */
+/* #region */
+:root {
+    /* Standard: Dark Theme (Factorio Style) */
+    --bg-color: #222;
+    --text-color: #f4f4f4;
+    --card-bg: #333;
+    --navbar-bg: #111;
+    --factorio-orange: #e99113;
+    
+    /* Tabellen-Variablen für Bootstrap-Überschreibung */
+    --table-bg: #333;
+    --table-text: #f4f4f4;
+    --table-border: #555;
+}
+
+/* Logik für den Light-Mode Schalter via Checkbox-Hack*/
+body:has(#theme-switch:checked) {
+    --bg-color: #f4f4f4;
+    --text-color: #222;
+    --card-bg: #ffffff;
+    --navbar-bg: #e0e0e0;
+    --factorio-orange: #d17a00;
+    
+    /* Tabellen-Variablen für Light-Mode */
+    --table-bg: #ffffff;
+    --table-text: #222;
+    --table-border: #ccc;
+}
+/* #endregion */
+
+/* -------------- Globaler Reset & Body -------------- */
+/* #region */
+* {
+    box-sizing: border-box; /* Padding wird nicht zur Breite addiert */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.4s, color 0.4s; /* Sanfter Wechsel */
+    line-height: 1.6;
+}
+/* #endregion */
+
+/* -------------- Navigation & Header -------------- */
+/* #region */
+.main-header {
+    /* Sticky sorgt dafür, dass das Menü beim Scrollen oben bleibt */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.bg-dark-custom {
+    background-color: var(--navbar-bg) !important;
+    border-bottom: 2px solid var(--factorio-orange);
+    transition: background-color 0.4s;
+}
+
+/* Verwendung von Nested CSS für die Navbar-Elemente */
+.navbar {
+    .logo {
+        color: var(--factorio-orange) !important;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .nav-link {
+        transition: color 0.3s;
+        &:hover {
+            color: var(--factorio-orange) !important; /* Pseudoselektor */
+        }
+    }
+}
+
+.theme-checkbox {
+    display: none; /* Versteckt die technische Checkbox des Theme-Switches */
+}
+
+.theme-label {
+    cursor: pointer;
+    padding: 4px 12px;
+    border: 1px solid var(--factorio-orange);
+    border-radius: 5px;
+    color: var(--factorio-orange);
+    font-weight: bold;
+    transition: 0.3s;
+    &:hover {
+        background-color: var(--factorio-orange);
+        color: white;
+    }
+}
+/* #endregion */
+
+/* -------------- Layout & Grid-System -------------- */
+/* #region */
+.grid-container {
+    display: grid;
+    /* Verwendung von CSS-Grid für das Desktop-Layout (3:1 Spalten)  */
+    grid-template-columns: 3fr 1fr; 
+    gap: 30px;
+    padding-top: 30px;
+}
+
+/* Media-Query für Responsivität (Tablet & Mobile)*/
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Umschalten auf einspaltiges Layout für mobile Endgeräte */
+    }
+    
+    aside {
+        /* Sidebar wird unter den Hauptinhalt verschoben  */
+        order: 2; 
+    }
+}
+/* #endregion */
+
+/* -------------- Inhalts-Komponenten (Artikel) -------------- */
+/* #region */
+article {
+    background: var(--card-bg);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--factorio-orange); /* Konsistente Rahmengestaltung  */
+    animation: fadeIn 0.8s ease-out; /* CSS Animation beim Laden*/
+    transition: background-color 0.4s;
+}
+
+/* Flexbox Positionierung für den Forschungs-Bereich */
+#forschung .d-flex {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+.bio-gif {
+    width: 150px;
+    height: 150px;
+    border: 3px solid var(--factorio-orange);
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(2.5); /* Interaktiver Zoom-Effekt  */
+    }
+}
+/* #endregion */
+
+/* -------------- Tabellen-Styling -------------- */
+/* #region */
+.table-custom {
+    /* Überschreibt Bootstrap-Variablen für das konsistente Farb-Theme  */
+    --bs-table-bg: var(--table-bg) !important;
+    --bs-table-color: var(--table-text) !important;
+    --bs-table-border-color: var(--table-border) !important;
+    
+    thead th {
+        background-color: var(--factorio-orange) !important;
+        color: black !important;
+    }
+}
+
+.table-wrapper {
+    overflow-x: auto; /* Erlaubt horizontales Scrollen auf kleinen Bildschirmen  */
+}
+/* #endregion */
+
+/* -------------- Sidebar & Karten -------------- */
+/* #region */
+/* Spezifisches Styling für die Sidebar-Karten */
+.card-custom {
+    background-color: var(--card-bg) !important; /* Nutzt die Theme-Variable */
+    color: var(--text-color) !important;       /* Nutzt die Theme-Variable */
+    border: 1px solid var(--factorio-orange);   /* Rahmen passend zum Spiel-Stil */
+    transition: background-color 0.4s, color 0.4s; /* Sanfter Übergang beim Wechsel */
+}
+
+.sidebar h3 {
+    color: var(--factorio-orange); /* Konsistente Farbwahl für Überschriften */
+}
+/* #endregion */
+
+/* -------------- Formular & Eingabefelder -------------- */
+/* #region */
+/* Gestaltung eines responsiven Formulars  */
+.form-control {
+    transition: border-color 0.3s, box-shadow 0.3s;
+    &:focus {
+        border-color: var(--factorio-orange) !important;
+        box-shadow: 0 0 0 0.25rem rgba(233, 145, 19, 0.25) !important;
+    }
+}
+
+.custom-input {
+    background-color: var(--bg-color) !important; /* Passt sich dem Hintergrund an */
+    color: var(--text-color) !important;       /* Textfarbe wechselt mit Theme */
+    border: 1px solid var(--factorio-orange) !important; /* Konsistente Rahmenfarbe  */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Verwendung von CSS-Pseudoselektoren für den Fokus-Zustand  */
+.custom-input:focus {
+    border-color: var(--factorio-orange) !important;
+    box-shadow: 0 0 10px var(--factorio-orange) !important; /* Glow-Effekt */
+    outline: none;
+}
+
+.custom-input::placeholder {
+    color: #888;
+    opacity: 0.8;
+}
+
+.btn-warning {
+    background-color: var(--factorio-orange) !important;
+    border: none !important;
+    font-weight: bold;
+}
+
+.form-section {
+    animation: fadeIn 1.2s ease-out; /* Konsistente Animation für Sektionen */
+}
+/* #endregion */
+
+/* -------------- Footer & Animation Keyframes -------------- */
+/* #region */
+footer {
+    border-top: 1px solid var(--factorio-orange); /* Rahmengestaltung */
+    color: var(--text-color);
+    padding: 20px 0;
+}
+
+/* Definition der Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* #endregion */

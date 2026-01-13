@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorio Einsteiger-Wiki</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylung/style.css">
+</head>
+
+<body>
+    <input type="checkbox" id="theme-switch" class="theme-checkbox">
+
+    <header class="main-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">Factorio-Wiki</a>
+
+                <div class="d-flex align-items-center">
+                    <label for="theme-switch" class="theme-label me-2">
+                        🌓 Modus
+                    </label>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#was-ist-factorio">Das Spiel</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#forschung">Forschung</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dlc">Space Age DLC</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="grid-container container">
+        <section class="content-area">
+            <h1>Willkommen beim Factorio Leitfaden</h1>
+
+            <article id="was-ist-factorio">
+                <h2>Was ist Factorio?</h2>
+                <p>Factorio ist ein Spiel, in dem du Fabriken baust und automatisierst.</p>
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/427520/ss_2533e54b0bd90a29adbedb60108ed277536ad445.1920x1080.jpg"
+                    alt="Factorio Spielszene" class="img-fluid">
+            </article>
+
+            <article id="forschung">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <div class="research-text">
+                        <h2>Die Forschung</h2>
+                        <p>Hier sind die wichtigsten Wissenschaftspakete:</p>
+                        <ul class="list-unstyled d-inline-block text-start">
+                            <li><strong>Automatisierung (Rot):</strong> Die Basis.</li>
+                            <li><strong>Logistik (Grün):</strong> Fließbänder.</li>
+                            <li><strong>Chemische Forschung (Blau):</strong> Öl.</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-image py-3">
+                        <img src="https://wiki.factorio.com/images/Biolab_entity_anim.gif"
+                            class="bio-gif rounded-circle" alt="Biolab">
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="table table-custom mt-3">
+                        <thead>
+                            <tr>
+                                <th>Paket</th>
+                                <th>Hauptzutat</th>
+                                <th>Nutzen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rot</td>
+                                <td>Kupferzahnrad</td>
+                                <td>Maschinen</td>
+                            </tr>
+                            <tr>
+                                <td>Grün</td>
+                                <td>Greifarm</td>
+                                <td>Logistik</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article id="video">
+                <h2>Trailer</h2>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube-nocookie.com/embed/J8SBp4SyvLc" title="Factorio Trailer"
+                        allowfullscreen></iframe>
+                </div>
+            </article>
+
+            <section id="kontakt" class="form-section container pb-5">
+                <h2 class="text-center mb-4">Feedback zum Wiki</h2>
+
+                <form id="wiki-form" class="mx-auto card card-custom p-4 shadow" style="max-width: 600px;">
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-bold">Name:</label>
+                        <input type="text" id="name" class="form-control custom-input" placeholder="Dein Name...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mail" class="form-label fw-bold">E-Mail:</label>
+                        <input type="email" id="mail" class="form-control custom-input" required
+                            placeholder="ingenieur@fabrik.de">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="betreff" class="form-label fw-bold">Betreff:</label>
+                        <select id="betreff" class="form-select custom-input">
+                            <option selected>Allgemeines Feedback</option>
+                            <option>Fehler in der Wiki gefunden</option>
+                            <option>Vorschlag für neue Inhalte</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nachricht" class="form-label fw-bold">Nachricht:</label>
+                        <textarea id="nachricht" class="form-control custom-input" rows="4"
+                            placeholder="Wie können wir die Wiki verbessern?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-2">Nachricht absenden</button>
+                </form>
+            </section>
+
+
+        </section>
+
+        <aside class="sidebar">
+            <h3>Quick Facts</h3>
+            <div class="card card-custom p-3 mb-3">
+                <p><strong>Entwickler:</strong> Wube Software</p>
+                <p><strong>Genre:</strong> Automatisierung</p>
+            </div>
+
+            <div id="dlc" class="card card-custom p-3">
+                <h3>Space Age DLC</h3>
+                <p>Reise in den Weltraum.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2026 Factorio-Wiki für die Schule</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
