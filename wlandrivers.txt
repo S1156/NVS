@@ -1,0 +1,45 @@
+
+Schnittstellenname: WLAN
+
+    Treiber                   : Realtek 8852CE WiFi 6E PCI-E NIC
+    Hersteller                : Realtek Semiconductor Corp.
+    Anbieter                  : Realtek Semiconductor Corp.
+    Datum                     : 02.10.2024
+    Version                   : 6001.16.126.323
+    INF-Datei                 : oem32.inf
+    Typ                       : Wi-Fi-Treiber (Ursprungsversion)
+    Unterstützte Funktypen    : 802.11b 802.11g 802.11n 802.11ac 802.11ax 802.11a
+    FIPS 140-Modus wird unterstützt: Ja
+    802.11w Management Frame Protection wird unterstützt: Ja
+    Unterstützte gehostete Netzwerke  : Nein
+    Im Infrastrukturmodus unterstützte Authentifizierung und unterstütztes Verschlüsselungsverfahren:
+                                Offen            Keine
+                                WPA2-Personal    CCMP
+                                Offen            WEP-40bit
+                                Offen            WEP-104bit
+                                Offen            WEP
+                                Firmenweiter WPA TKIP
+                                WPA-Personal     TKIP
+                                WPA2-Enterprise  TKIP
+                                WPA2-Personal    TKIP
+                                Firmenweiter WPA CCMP
+                                WPA-Personal     CCMP
+                                WPA2-Enterprise  CCMP
+                                WPA3-Personal    CCMP
+                                WPA3-Enterprise 192 Bits GCMP-256
+                                OWE              CCMP
+                                Herstellerdefiniert TKIP
+                                Herstellerdefiniert CCMP
+                                Herstellerdefiniert Herstellerdefiniert
+                                Herstellerdefiniert Herstellerdefiniert
+                                WPA2-Enterprise  Herstellerdefiniert
+                                WPA2-Enterprise  Herstellerdefiniert
+                                Herstellerdefiniert Herstellerdefiniert
+                                Herstellerdefiniert Herstellerdefiniert
+                                WPA3-Enterprise  CCMP
+    Anzahl unterstützter Bänder: 3
+                                2,4 GHz [ 0 MHz – 0 MHz]
+                                5 GHz [ 0 MHz – 0 MHz]
+                                6 GHz [ 0 MHz – 0 MHz]
+    Unterstützte drahtlose Anzeige: Ja (Grafiktreiber: Ja, Wi-Fi-Treiber: Ja)
+
