@@ -1,0 +1,52 @@
+[
+    {
+        "question": "Was ist das Hauptziel in Factorio?",
+        "correct_answer": "Eine Rakete starten",
+        "incorrect_answers": ["Eine Stadt errichten", "Ein Schiff bauen", "Alle Feinde besiegen"]
+    },
+    {
+        "question": "Wie viele Eisenplatten werden benötigt, um eine Stahlplatte herzustellen?",
+        "correct_answer": "5",
+        "incorrect_answers": ["3", "10", "8"]
+    },
+    {
+        "question": "Welches Gebäude automatisiert die Herstellung von Items?",
+        "correct_answer": "Montageautomat",
+        "incorrect_answers": ["Fließband", "Splitter", "Bohrmaschine"]
+    },
+    {
+        "question": "Was wird benötigt, um eine elektronische Platine herzustellen?",
+        "correct_answer": "Eisenplatte und Kupferkabel",
+        "incorrect_answers": ["Kupferplatte und Stahl", "Stahl und Kunststoff", "Zahnrad und Kupfer"]
+    },
+    {
+        "question": "Wie heißt das erste Forschungspaket, das man in Factorio herstellt?",
+        "correct_answer": "Rotes Wissenschaftspaket",
+        "incorrect_answers": ["Blaues Wissenschaftspaket", "Grünes Wissenschaftspaket", "Gelbes Wissenschaftspaket"]
+    },
+    {
+        "question": "Wie heißt der 2024 erschienene Factorio-DLC?",
+        "correct_answer": "Space Age",
+        "incorrect_answers": ["Deep Space", "Star Factory", "Galactic Age"]
+    },
+    {
+        "question": "Welche Verteidigung schießt automatisch auf Feinde?",
+        "correct_answer": "Geschützturm",
+        "incorrect_answers": ["Steinmauer", "Splitter", "Greifarm"]
+    },
+    {
+        "question": "Was erzeugt eine Dampfmaschine in Factorio?",
+        "correct_answer": "Elektrische Energie",
+        "incorrect_answers": ["Dampf", "Kohle", "Öl"]
+    },
+    {
+        "question": "Welches Transportmittel bewegt Items zwischen Gebäuden auf einem Band?",
+        "correct_answer": "Fließband",
+        "incorrect_answers": ["Greifarm", "Splitter", "Montageautomat"]
+    },
+    {
+        "question": "Aus wie vielen Kupferplatten wird ein Kupferkabel hergestellt?",
+        "correct_answer": "1 Kupferplatte ergibt 2 Kupferkabel",
+        "incorrect_answers": ["2 Kupferplatten", "3 Kupferplatten", "1 Kupferplatte ergibt 1 Kupferkabel"]
+    }
+]
